@@ -42,6 +42,33 @@ button:active,button:focus {
     padding: 25px 0
 }
 
+#typed-name {
+  font-family: 'Courier New', Courier, monospace; /* Monospace font for the typing effect */
+  font-size: 3rem; /* Adjust size as needed */
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 4px solid black; /* Cursor effect */
+  width: 0;
+  animation: typing 4s steps(30) 1s 1 normal both, blink 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+
+
 /* 
 
 .css-class {
