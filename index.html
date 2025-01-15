@@ -69,10 +69,11 @@
 
                                         <!-- Learn More Button -->
                                         <div class="btn-group" style="display: flex; justify-content: center; width: 100%; margin-top: 30px;">
-                                            <button title="Learn More" onmouseover="hover('learn-more')" onmouseout="gone('learn-more')" 
-                                                onclick="window.open('https://gracejanusz.github.io/', '_blank')" 
-                                                class="button button5" style="width: 370px; height: 100px; text-align: center; font-size: 24px;">
-                                                Learn More About Me
+											<button title="Learn More" onmouseover="hover('learn-more')" onmouseout="gone('learn-more')" 
+												onclick="window.open('https://gracejanusz.github.io/aboutme.html', '_blank')" 
+												class="button button5" style="width: 370px; height: 100px; text-align: center; font-size: 24px;">
+												Learn More About Me
+										
                                             </button>
                                         </div>
                                     </div>
@@ -84,5 +85,25 @@
             </div>
         </div>
     </div>
+	<!-- Small Button to Toggle Background -->
+<button id="toggleBackground" onclick="toggleBackground()">Change Background</button>
+
 </body>
 </html>
+
+<script>
+    function toggleBackground() {
+        // Get the body element
+        const body = document.body;
+
+        // Check the current background
+        if (body.style.background.includes("gif")) {
+            // Change to a solid background color if the current background is a GIF
+            body.style.background = "#a3e3f1"; // Use any solid color you prefer
+        } else {
+            // Change back to the GIF background if the current background is solid
+            body.style.background = "url('images/200w.gif') no-repeat center center fixed";
+            body.style.backgroundSize = "cover"; // Ensure the GIF covers the whole page
+        }
+    }
+</script>

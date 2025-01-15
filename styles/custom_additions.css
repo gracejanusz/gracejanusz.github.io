@@ -62,13 +62,18 @@ button:active,button:focus {
 }
 
 #typed-name {
-  font-family: 'Courier New', Courier, monospace; /* Monospace font for the typing effect */
-  font-size: 4.3rem; /* Adjust size as needed */
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 4.2rem;
   white-space: nowrap;
   overflow: hidden;
   border-right: 4px solid black; /* Cursor effect */
   width: 0;
-  animation: typing 4s steps(20) 1s 1 normal both, blink 0.75s step-end infinite;
+  animation: typing 4s steps(30) 1s 1 normal both, blink 0.75s step-end infinite;
+  
+  /* Add black background and some padding */
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+  color: white; /* White text color for contrast */
+  padding: 0 10px; /* Add some padding to give it space around the text */
 }
 
 @keyframes typing {
@@ -86,7 +91,23 @@ button:active,button:focus {
   }
 }
 
+#toggleBackground {
+  position: fixed; /* Fixed position at the bottom-right corner */
+  bottom: 20px; /* 20px from the bottom */
+  right: 20px; /* 20px from the right */
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent dark background */
+  color: white; /* White text */
+  border: none; /* Remove default border */
+  padding: 10px 20px; /* Add some padding */
+  font-size: 14px; /* Make the font smaller */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Change the cursor to pointer */
+  transition: background-color 0.3s; /* Smooth background color change */
+}
 
+#toggleBackground:hover {
+  background-color: rgba(0, 0, 0, 0.8); /* Darken the background on hover */
+}
 
 /* 
 
