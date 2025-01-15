@@ -1,96 +1,88 @@
-<!-- This is the location from which the webpage will be served. 
-Start here to edit personal info and move onto styling afterwards -->
-
-<!-- To preview the site before pushing, we host on local. I personally
-use: https://www.npmjs.com/package/http-server -->
-
 <!DOCTYPE html>
-<html lang="en-US" class="no-js no-svg"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="styles/default_style.css" />
-	<link rel="stylesheet" type="text/css" href="styles/custom_additions.css" />
+    <link rel="stylesheet" type="text/css" href="styles/custom_additions.css" />
     <script src="script.js" defer></script>
-	<!-- ADD A CUSTOM IMAGE HERE -->
-	<link rel="icon" href="images/GJ.jpg">
-	<div class="col-md-6">
-		<title id="typed-name"></title>
-	</div>
+    <link rel="icon" href="images/GJ.jpg">
+    <title>Grace Janusz</title>
 </head>
+<body>
 
-<!-- COMMENT THIS BLOCK OUT -->
-<!-- <h3><a style="color:black">
-	This is a template. Comment out this code block in index.html to get started!   
-	- Your Algo Group Board
-</a></h3> -->
+    <div id="page" class="site">
+        <!-- Your content (buttons, title, etc.) goes here -->
+        <div class="portfolio-title-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-6">
+                        <div class="title-wrap">
+                            <h2 id="typed-name">Grace Janusz</h2>
+                        </div>
+                    </div>
+                    <div class="col-md-3"></div>
+                </div>
+            </div>
+        </div>
 
-<body class="home page-template-default page page-id-6">
-<div id="page" class="site">
+        <div id="content" class="site-content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div id="primary" class="content-area">
+                            <main id="main" class="site-main">
+                                <article id="post-6" class="post-6 page type-page status-publish hentry">
 
-<div class="fade-in-image">
+                                    <div class="entry-content">
+                                        <div class="btn-group">
+                                            <!-- Resume Button -->
+                                            <button title="Resume" onmouseover="hover('resume')" onmouseout="gone('resume')"
+                                                onclick="window.open('./Janusz_Grace_Resume (1).pdf', '_blank')" 
+                                                class="button button5" style="width:175px;height:140px;">
+                                                <img id="resume" src="images/resume-colored.png" alt="Resume" style="width:50px;height:50px;">
+                                            </button>
 
-<div class="portfolio-title-section">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-3"></div>
-			<!-- ADD YOUR NAME HERE -->
-			<div class="col-md-6"><div class="title-wrap"><h2 id="typed-name">Grace Janusz</h2></div></div>
-			<div class="col-md-3"></div>
-		</div>
-	</div>
-</div>
+                                            <!-- Music Button -->
+                                            <button title="Music" onmouseover="hover('music')" onmouseout="gone('music')" 
+                                                onclick="window.open('https://soundcloud.com/grace-131551047', '_blank')" 
+                                                class="button button5" style="width:175px;height:140px;"> 
+                                                <img id="music" src="images/music-colored.png" alt="CV" style="width:50px;height:50px;">
+                                            </button>
+                                        </div>
+                                        <div class="btn-group">
+                                            <!-- LinkedIn Button -->
+                                            <button title="LinkedIn" onmouseover="hover('linkedin')" onmouseout="gone('linkedin')" 
+                                                onclick="window.open('https://www.linkedin.com/in/grace-janusz-301a88288', '_blank')" 
+                                                class="button button5" style="width:175px;height:140px;">
+                                                <img id="linkedin" src="images/linkedin-colored.png" class="" alt="GitHub" style="width:24px;height:24px;">
+                                            </button>
 
-<div id="content" class="site-content">
-<div class="container">
-<div class="row">
-<div class="col-lg-12">
-<div id="primary" class="content-area">
-<main id="main" class="site-main">
-<article id="post-6" class="post-6 page type-page status-publish hentry">
+                                            <!-- GitHub Button -->
+                                            <button title="GitHub" onmouseover="hover('github')" onmouseout="gone('github')" 
+                                                onclick="window.open('https://github.com/gracejanusz', '_blank')" 
+                                                class="button button5" style="width:175px;height:140px;">
+                                                <img id="github" src="images/github-colored.png" class="github-icon" alt="GitHub" style="width:50px;height:50px;">
+                                            </button>
+                                        </div>
 
-<!-- BUTTONS ARE BELOW, EDIT LINKS AND SUCH HERE -->
-<div class="entry-content">
-<div class="btn-group">
-
-	<!-- RESUME BUTTON -->
-	<button title="Resume" onmouseover="hover('resume')" onmouseout="gone('resume')"
-	onclick="window.open('./Janusz_Grace_Resume (1).pdf', '_blank')" 
-	class="button button5" style="width:175px;height:140px;">
-		<img id="resume" src="images/resume-colored.png" alt="GitHub" style="width:50px;height:50px;">
-	</button>
-
-	<!-- Music BUTTON -->
-	<button title="Music" onmouseover="hover('music')" onmouseout="gone('music')" 
-	onclick="window.open('https://soundcloud.com/grace-131551047', '_blank')" 
-	class="button button5" style="width:175px;height:140px;"> 
-		<img id="music" src="images/music-colored.png" alt="CV" style="width:50px;height:50px;">
-	</button>
-
-</div>
-<div class="btn-group">
-
-	<!-- LINKEDIN BUTTON -->
-	<button title="LinkedIn" onmouseover="hover('linkedin')" onmouseout="gone('linkedin')" 
-	onclick="window.open('https:www.linkedin.com/in/grace-janusz-301a88288', '_blank')" 
-	class="button button5" style="width:175px;height:140px;">
-		<img id="linkedin" src="images/linkedin-colored.png" class="" alt="GitHub" style="width:24px;height:24px;">
-	</button>
-
-	<!-- GITHUB BUTTON -->
-	<button title="GitHub" onmouseover="hover('github')" onmouseout="gone('github')" 
-	onclick="window.open('https://github.com/gracejanusz', '_blank')" 
-	class="button button5" style="width:175px;height:140px;">
-		<img id="github" src="images/github-colored.png" class="github-icon" alt="GitHub" style="width:50px;height:50px;">
-	</button>
-
-</div>
-</div>
-</div>
-</article>
-</main>
-</div>
-</div>
-</div>
-</div>
-</div>
-					
+                                        <!-- Learn More Button -->
+                                        <div class="btn-group" style="display: flex; justify-content: center; width: 100%; margin-top: 30px;">
+                                            <button title="Learn More" onmouseover="hover('learn-more')" onmouseout="gone('learn-more')" 
+                                                onclick="window.open('https://gracejanusz.github.io/', '_blank')" 
+                                                class="button button5" style="width: 370px; height: 100px; text-align: center; font-size: 24px;">
+                                                Learn More About Me
+                                            </button>
+                                        </div>
+                                    </div>
+                                </article>
+                            </main>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

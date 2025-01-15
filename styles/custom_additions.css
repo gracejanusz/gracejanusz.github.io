@@ -9,20 +9,39 @@ good luck!
 
 */
 
-body {
+/* body {
     background-color: #a3e3f1;
     color: #017691
+} */
+
+body {
+  background: url('../images/200w.gif') no-repeat center center fixed;
+  background-size: cover;
+  color: #017691;
+  font-family: 'Arial', sans-serif; /* or any other font you prefer */
 }
 
 .button {
-    background-color:#e5f0fc; 
-    border-color: #00798c;
-    border-radius: 10px;
+  background-color: #e5f0fc; 
+  border-color: #00798c;
+  border-radius: 10px;
+  font-family: 'Monospace', 'Courier New';
+  color: #020428; 
+  font-size: 16px; 
+  padding: 10px 20px;
+  transition: background-color 0.3s ease; 
 }
 
 .button:hover {
     background-color:  #0a85b1; 
 }
+
+.learn-more {
+  font-family: 'Monospace', 'Courier New';
+  color: #020428;
+}
+
+
 
 button:active,button:focus {
     border-color: #222;
@@ -35,7 +54,7 @@ button:active,button:focus {
 
 .title-wrap h2 {
     font-family: 'Monospace', 'Courier New';
-    color: #3b3629;
+    color: #020428;
 }
 
 .site-content {
@@ -44,12 +63,12 @@ button:active,button:focus {
 
 #typed-name {
   font-family: 'Courier New', Courier, monospace; /* Monospace font for the typing effect */
-  font-size: 3rem; /* Adjust size as needed */
+  font-size: 4.3rem; /* Adjust size as needed */
   white-space: nowrap;
   overflow: hidden;
   border-right: 4px solid black; /* Cursor effect */
   width: 0;
-  animation: typing 4s steps(30) 1s 1 normal both, blink 0.75s step-end infinite;
+  animation: typing 4s steps(20) 1s 1 normal both, blink 0.75s step-end infinite;
 }
 
 @keyframes typing {
