@@ -10,17 +10,18 @@ good luck!
 */
 
 body {
-    background-color: #f4ebd5;
+    background-color: #a3e3f1;
+    color: #017691
 }
 
 .button {
-    background-color: #dfd2b3; 
-    border-color: #726547;
+    background-color:#e5f0fc; 
+    border-color: #00798c;
     border-radius: 10px;
 }
 
 .button:hover {
-    background-color: #8d8164; 
+    background-color:  #0a85b1; 
 }
 
 button:active,button:focus {
