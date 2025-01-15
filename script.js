@@ -16,3 +16,19 @@ document.addEventListener('DOMContentLoaded', () => {
     })
 
 })
+
+window.onload = function() {
+  const nameElement = document.getElementById('typed-name');
+  const name = 'Grace Janusz';  // Your name here
+
+  let index = 0;
+  function typeName() {
+    if (index < name.length) {
+      nameElement.textContent += name[index];
+      index++;
+      setTimeout(typeName, 150); 
+    }
+  }
+
+  typeName(); 
+};
