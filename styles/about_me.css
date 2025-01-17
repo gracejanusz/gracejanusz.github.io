@@ -173,6 +173,14 @@ Good luck!
         font-size: 3rem; /* Smaller font size on mobile */
     }
   }
+
+  .footer-left {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    text-align: left;
+}
+
   
   /* End of Refactored CSS */
   
