@@ -1,113 +1,180 @@
 /* 
 
-add additional styling to the template 
-here so that it's refactorable later.
-consider new html elements as well.
-good luck!
+Add additional styling to the template 
+so that it's refactorable later.
+Consider new html elements as well.
+Good luck!
 
 - kathir
 
 */
 
-/* body {
-    background-color: #a3e3f1;
-    color: #017691
-} */
+/* GLOBAL STYLES */
+:root {
+  --primary-bg-color: #a3e3f1; /* Light blue background */
+  --secondary-bg-color: #017691; /* Dark blue text */
+  --button-bg-color: #e5f0fc; /* Button background */
+  --button-border-color: #00798c; /* Button border */
+  --button-text-color: #020428; /* Button text color */
+  --button-hover-bg-color: #0a85b1; /* Button hover background */
+  --font-family-primary: 'Arial', sans-serif;
+  --font-family-monospace: 'Monospace', 'Courier New';
+  --font-family-courier: 'Courier New', Courier, monospace;
+  --border-radius: 10px;
+  --transition-time: 0.3s;
+  --text-white: #ffffff;
+  --text-dark: #020428;
+}
 
+/* Basic body styles */
 body {
   background: url('../images/200w.gif') no-repeat center center fixed;
   background-size: cover;
-  color: #017691;
-  font-family: 'Arial', sans-serif; /* or any other font you prefer */
+  color: var(--secondary-bg-color);
+  font-family: var(--font-family-primary);
 }
 
-.button {
-  background-color: #e5f0fc; 
-  border-color: #00798c;
-  border-radius: 10px;
-  font-family: 'Monospace', 'Courier New';
-  color: #020428; 
-  font-size: 16px; 
-  padding: 10px 20px;
-  transition: background-color 0.3s ease; 
-}
-
-.button:hover {
-    background-color:  #0a85b1; 
-}
-
-.learn-more {
-  font-family: 'Monospace', 'Courier New';
-  color: #020428;
-}
-
-
-
-button:active,button:focus {
-    border-color: #222;
-    outline: none
-}
-
-.portfolio-title-section h2 {
-    font-size: 4.5em;
-}
-
-.title-wrap h2 {
-    font-family: 'Monospace', 'Courier New';
-    color: #020428;
-}
-
-.site-content {
-    padding: 25px 0
+/* TYPOGRAPHY */
+h1, h2, h3 {
+  font-family: var(--font-family-monospace);
+  color: var(--text-dark);
 }
 
 #typed-name {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: var(--font-family-courier);
   font-size: 4.2rem;
   white-space: nowrap;
   overflow: hidden;
-  border-right: 4px solid black; /* Cursor effect */
+  border-right: 4px solid var(--text-dark); /* Cursor effect */
   width: 0;
   animation: typing 4s steps(30) 1s 1 normal both, blink 0.75s step-end infinite;
-  
-  /* Add black background and some padding */
   background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
-  color: white; /* White text color for contrast */
-  padding: 0 10px; /* Add some padding to give it space around the text */
+  color: var(--text-white); /* White text color for contrast */
+  padding: 0 10px;
 }
 
+/* BUTTON STYLES */
+.button {
+  background-color: var(--button-bg-color); 
+  border-color: var(--button-border-color);
+  border-radius: var(--border-radius);
+  font-family: var(--font-family-monospace);
+  color: var(--button-text-color); 
+  font-size: 16px; 
+  padding: 10px 20px;
+  transition: background-color var(--transition-time) ease; 
+}
+
+.button:hover {
+  background-color: var(--button-hover-bg-color); 
+}
+
+button:active, button:focus {
+  border-color: #222;
+  outline: none;
+}
+
+/* TEXT STYLES */
+.learn-more {
+  font-family: var(--font-family-monospace);
+  color: var(--text-dark);
+}
+
+/* SECTION STYLES */
+.portfolio-title-section h2 {
+  font-size: 4.5em;
+}
+
+/* CONTENT STYLES */
+.site-content {
+  padding: 25px 0;
+}
+
+.title-wrap h2 {
+  font-family: var(--font-family-monospace);
+  color: var(--text-dark);
+}
+
+/* FIXED BACKGROUND TOGGLE BUTTON */
+#toggleBackground {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: var(--text-white);
+  border: none;
+  padding: 10px 20px;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color var(--transition-time);
+}
+
+#toggleBackground:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* ANIMATIONS */
 @keyframes typing {
   from {
-    width: 0;
+      width: 0;
   }
   to {
-    width: 100%;
+      width: 100%;
   }
 }
 
 @keyframes blink {
   50% {
-    border-color: transparent;
+      border-color: transparent;
   }
 }
 
-#toggleBackground {
-  position: fixed; /* Fixed position at the bottom-right corner */
-  bottom: 20px; /* 20px from the bottom */
-  right: 20px; /* 20px from the right */
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent dark background */
-  color: white; /* White text */
-  border: none; /* Remove default border */
-  padding: 10px 20px; /* Add some padding */
-  font-size: 14px; /* Make the font smaller */
-  border-radius: 5px; /* Rounded corners */
-  cursor: pointer; /* Change the cursor to pointer */
-  transition: background-color 0.3s; /* Smooth background color change */
+/* LAYOUT HELPER CLASSES */
+
+/* Utility class for centering content */
+.text-center {
+  text-align: center;
 }
 
-#toggleBackground:hover {
-  background-color: rgba(0, 0, 0, 0.8); /* Darken the background on hover */
+/* Utility class for adding margin */
+.mt-20 {
+  margin-top: 20px;
 }
+
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+/* Container class for managing layout */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* MEDIA QUERIES (Responsive Design) */
+@media screen and (max-width: 768px) {
+  /* Mobile adjustments */
+  body {
+      background-size: cover;
+  }
+
+  .button {
+      font-size: 14px; /* Smaller buttons on mobile */
+  }
+
+  .portfolio-title-section h2 {
+      font-size: 3em; /* Smaller title for mobile */
+  }
+
+  #typed-name {
+      font-size: 3rem; /* Smaller font size on mobile */
+  }
+}
+
+/* End of Refactored CSS */
 
 /* 
 
