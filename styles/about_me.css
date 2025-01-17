@@ -1,0 +1,188 @@
+/* 
+
+Add additional styling to the template 
+so that it's refactorable later.
+Consider new html elements as well.
+Good luck!
+
+- kathir
+
+*/
+
+/* GLOBAL STYLES */
+:root {
+    --primary-bg-color: #a3e3f1; /* Light blue background */
+    --secondary-bg-color: #017691; /* Dark blue text */
+    --button-bg-color: #e5f0fc; /* Button background */
+    --button-border-color: #00798c; /* Button border */
+    --button-text-color: #020428; /* Button text color */
+    --button-hover-bg-color: #0a85b1; /* Button hover background */
+    --font-family-primary: 'Arial', sans-serif;
+    --font-family-monospace: 'Monospace', 'Courier New';
+    --font-family-courier: 'Courier New', Courier, monospace;
+    --border-radius: 10px;
+    --transition-time: 0.3s;
+    --text-white: #ffffff;
+    --text-dark: #020428;
+  }
+  
+  /* Basic body styles */
+  body {
+    background: #a3e3f1;
+    background-size: cover;
+    color: var(--secondary-bg-color);
+    font-family: var(--font-family-primary);
+  }
+  
+  /* TYPOGRAPHY */
+  h1, h2, h3 {
+    font-family: var(--font-family-monospace);
+    color: var(--text-dark);
+  }
+  
+  #typed-name {
+    font-family: var(--font-family-courier);
+    font-size: 4.2rem;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 4px solid var(--text-dark); /* Cursor effect */
+    width: 0;
+    animation: typing 4s steps(30) 1s 1 normal both, blink 0.75s step-end infinite;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+    color: var(--text-white); /* White text color for contrast */
+    padding: 0 10px;
+  }
+  
+  /* BUTTON STYLES */
+  .button {
+    background-color: var(--button-bg-color); 
+    border-color: var(--button-border-color);
+    border-radius: var(--border-radius);
+    font-family: var(--font-family-monospace);
+    color: var(--button-text-color); 
+    font-size: 16px; 
+    padding: 10px 20px;
+    transition: background-color var(--transition-time) ease; 
+  }
+  
+  .button:hover {
+    background-color: var(--button-hover-bg-color); 
+  }
+  
+  button:active, button:focus {
+    border-color: #222;
+    outline: none;
+  }
+  
+  /* TEXT STYLES */
+  .learn-more {
+    font-family: var(--font-family-monospace);
+    color: var(--text-dark);
+  }
+  
+  /* SECTION STYLES */
+  .portfolio-title-section h2 {
+    font-size: 4.5em;
+  }
+  
+  /* CONTENT STYLES */
+  .site-content {
+    padding: 25px 0;
+  }
+  
+  .title-wrap h2 {
+    font-family: var(--font-family-monospace);
+    color: var(--text-dark);
+  }
+  
+  /* FIXED BACKGROUND TOGGLE BUTTON */
+  #toggleBackground {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: var(--text-white);
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color var(--transition-time);
+  }
+  
+  #toggleBackground:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  /* ANIMATIONS */
+  @keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+  }
+  
+  @keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+  }
+  
+  /* LAYOUT HELPER CLASSES */
+  
+  /* Utility class for centering content */
+  .text-center {
+    text-align: center;
+  }
+  
+  /* Utility class for adding margin */
+  .mt-20 {
+    margin-top: 20px;
+  }
+  
+  .mb-20 {
+    margin-bottom: 20px;
+  }
+  
+  /* Container class for managing layout */
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* MEDIA QUERIES (Responsive Design) */
+  @media screen and (max-width: 768px) {
+    /* Mobile adjustments */
+    body {
+        background-size: cover;
+    }
+  
+    .button {
+        font-size: 14px; /* Smaller buttons on mobile */
+    }
+  
+    .portfolio-title-section h2 {
+        font-size: 3em; /* Smaller title for mobile */
+    }
+  
+    #typed-name {
+        font-size: 3rem; /* Smaller font size on mobile */
+    }
+  }
+  
+  /* End of Refactored CSS */
+  
+  /* 
+  
+  .css-class {
+      attribute: value(s)
+  } 
+  
+  ... if this doesn't make sense go learn how css works first!
+  
+  */
+  
